@@ -1,135 +1,80 @@
 # Development Standards
 
-Opinionated development standards, architectural decisions, and engineering practices for building maintainable software systems with .NET, Azure, and AI-assisted development.
+This repository documents the engineering standards, architectural decisions, and delivery practices I apply when designing and implementing software solutions.
 
-The purpose of this repository is to provide a pragmatic baseline for new projects, reduce recurring technical discussions, and enable consistent implementations across teams and AI agents.
-
----
-
-## Guiding Principles
-
-- Simplicity over cleverness
-- Maintainability over short-term optimization
-- Explicitness over convention magic
-- Automation wherever possible
-- Security by default
-- Fast feedback cycles
-- AI should accelerate development, not replace engineering judgment
+Its purpose is to ensure that projects are built on proven patterns, remain maintainable over time, and consistently meet enterprise expectations regarding quality, security, and reliability.
 
 ---
 
-# Repository Structure
+# Why This Exists
 
-```text
-dev-standards
-├── standards/
-│   ├── architecture.md
-│   ├── coding-standard.md
-│   ├── api-design-standard.md
-│   ├── testing-standard.md
-│   ├── cicd-standard.md
-│   ├── security-standard.md
-│   ├── observability-standard.md
-│   ├── technology-selection.md
-│   ├── frontend-technology-selection.md
-│   ├── documentation-standard.md
-│   ├── repository-standard.md
-│   ├── requirements-standard.md
-│   ├── solution-scaffolding-standard.md
-│   ├── ai-development-process.md
-│   ├── agent-governance.md
-│   ├── project-lifecycle.md
-│   └── standards-governance.md
-│
-└── adrs/
-    ├── ADR-001-Object-Mapping-Library.md
-    ├── ADR-002-Dispatcher-Pattern.md
-    ├── ADR-003-Validation-Library.md
-    ├── ADR-004-Authentication-Strategy.md
-    ├── ADR-005-Logging-Abstraction.md
-    ├── ADR-006-AI-Provider-Abstraction.md
-    ├── ADR-007-Repository-Management-Strategy.md
-    ├── ADR-008-Documentation-Philosophy.md
-    ├── ADR-009-Modular-Monolith.md
-    ├── ADR-010-Vertical-Slice-Architecture.md
-    ├── ADR-011-Layering-and-Dependency-Rules.md
-    ├── ADR-012-Database-and-Persistence.md
-    └── ADR-TEMPLATE.md
-```
+Software quality should not depend on individual developers making ad-hoc decisions.
+
+By relying on established standards and documented architectural decisions, projects benefit from:
+
+* Predictable and maintainable architectures
+* Consistent implementation quality
+* Reduced technical debt
+* Faster onboarding of team members
+* Transparent and traceable technology decisions
+* Improved collaboration with AI-assisted development tools
+* Lower long-term ownership costs
+
+These standards represent the baseline I use when delivering customer projects.
 
 ---
 
-# Standards
+# Engineering Standards
 
-These documents describe preferred practices and conventions used across projects.
+The `standards/` directory contains guidelines covering the complete software delivery lifecycle, including:
 
-| Category | Description |
-|---------|-------------|
-| Architecture | Application architecture and dependency rules |
-| Coding | Naming conventions and coding guidelines |
-| API Design | REST API design principles |
-| Testing | Unit, integration and end-to-end testing |
-| Security | Authentication, authorization and secrets handling |
-| CI/CD | Build, deployment and release pipelines |
-| Observability | Logging, tracing and metrics |
-| Documentation | Documentation philosophy and expectations |
-| AI Development | Guidelines for AI-assisted software engineering |
-| Agent Governance | Rules and responsibilities for autonomous agents |
-
----
-
-# Architectural Decision Records (ADRs)
-
-Technical decisions are documented using ADRs.
-
-Examples include:
-
-- Object mapping strategy
-- Dispatcher implementation
-- Validation framework selection
-- Authentication approach
-- Logging abstraction
-- AI provider integration
-- Modular monolith architecture
-- Vertical Slice Architecture
-- Persistence strategy
-
-Each ADR captures:
-
-- Context
-- Decision
-- Alternatives considered
-- Consequences
+* Architecture and dependency management
+* Coding conventions and review expectations
+* API design principles
+* Security practices
+* Testing strategies
+* CI/CD pipelines
+* Observability and monitoring
+* Documentation requirements
+* Technology selection criteria
+* AI-assisted development workflows
+* Governance for autonomous agents
 
 ---
 
-# Intended Usage
+# Architectural Decision Records
 
-This repository can be used as:
+Technology choices are documented using Architecture Decision Records (ADRs).
 
-- A starting point for greenfield projects
-- A baseline for team engineering practices
-- Context for AI coding assistants
-- Documentation for onboarding developers
-- A template for internal engineering playbooks
+Examples include decisions regarding:
 
----
+* Object mapping libraries
+* Dispatcher implementations
+* Validation frameworks
+* Authentication strategies
+* Logging abstractions
+* AI provider integrations
+* Repository management
+* Modular Monolith architecture
+* Vertical Slice Architecture
+* Persistence strategies
 
-# Contributing
-
-Standards evolve continuously.
-
-Contributions should prioritize:
-
-- Practical experience
-- Reduced complexity
-- Long-term maintainability
-- Proven patterns over trends
+Documenting these decisions provides transparency and ensures that architectural choices remain understandable and reproducible throughout the lifetime of a system.
 
 ---
 
-# Philosophy
+# Quality Through Standardization
 
-> Good standards remove unnecessary discussions.
+High-quality software is rarely the result of isolated best practices.
 
-> Great standards allow humans and AI agents to make the same decisions repeatedly without supervision.
+It emerges from a disciplined engineering process in which recurring decisions are standardized, documented, and continuously improved.
+
+This repository reflects the approach I follow to deliver solutions that are:
+
+* Maintainable
+* Secure
+* Testable
+* Observable
+* Adaptable to changing business requirements
+
+The objective is not to maximize technological novelty, but to provide reliable software systems that continue to deliver value years after their initial release.
