@@ -71,3 +71,16 @@ Custom Authentication
 Applications shall depend on authentication abstractions.
 
 Authentication providers shall not leak into business logic.
+
+---
+
+## Public consumer applications
+
+Enterprise login (Entra ID) is **not** mandatory when requirements define a **public, anonymous entry point**.
+
+For such applications:
+
+* Document the chosen authentication or access mechanism in `docs/requirements.md` and `docs/security.md`.
+* When external LLM calls are involved, apply **ADR-014** (abuse and cost controls — mechanism is project-specific).
+
+Entra ID remains the preferred choice for workforce, authenticated B2B, and enterprise scenarios.

@@ -54,6 +54,9 @@ Required sections:
 | ADR-010 | Vertical Slice Architecture | Accepted |
 | ADR-011 | Layering and Dependency Rules | Accepted |
 | ADR-012 | Database and Persistence | Accepted |
+| ADR-013 | .NET LTS Version Policy | Accepted |
+| ADR-014 | Public AI Endpoint Abuse Protection | Accepted |
+| ADR-015 | Tiered LLM Model Selection | Accepted |
 
 ---
 

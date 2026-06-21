@@ -17,7 +17,9 @@ The following technologies are mandatory:
 ## Language
 
 * C#
-* Supported .NET LTS Version
+* **Current .NET LTS** at implementation time (see ADR-013)
+
+Pin SDK in `global.json` and align CI and hosting runtime with the confirmed LTS major version. Do not fix a major version in handbook standards.
 
 ## Frontend
 

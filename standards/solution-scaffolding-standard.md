@@ -306,7 +306,24 @@ See `templates/.github/` for reference configurations.
 
 ---
 
-# Human Approval
+# .NET LTS pinning (ADR-013)
+
+When scaffolding .NET projects:
+
+1. Confirm current LTS from the official .NET support policy.
+2. Add `global.json` at repository root pinning the SDK.
+3. Set `TargetFramework` to `netX.0` matching that LTS.
+4. Document pinned version in `docs/architecture.md` after scaffold.
+
+Do not hardcode a major version in handbook standards.
+
+---
+
+# Azure web applications
+
+For projects hosted on Azure App Service, follow `standards/azure-web-application-guide.md` when preparing `docs/operations.md`.
+
+---
 
 AI systems may scaffold projects.
 

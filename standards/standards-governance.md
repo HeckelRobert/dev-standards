@@ -46,7 +46,7 @@ Changes are recorded in `CHANGELOG.md`.
 Every project shall record the adopted handbook version in `ai/project-context.md`:
 
 ```
-Handbook Version: v1.2.0
+Handbook Version: v1.3.1
 ```
 
 When upgrading:
@@ -87,6 +87,12 @@ Projects may override platform standards only when:
 | standards/testing-standard.md | Testing requirements |
 | standards/testing-toolchain.md | Testing libraries and patterns |
 | standards/technology-selection.md | Technology framework |
+
+### Conditional standards (apply when hosting model matches)
+
+| Document | When to apply |
+|----------|---------------|
+| standards/azure-web-application-guide.md | Projects hosted on Azure App Service |
 
 ---
 

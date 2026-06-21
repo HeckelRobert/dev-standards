@@ -144,6 +144,10 @@ The application must not become tightly coupled to:
 
 Provider replacement should remain possible.
 
+For public endpoints that invoke LLMs, apply ADR-014 (abuse protection) and ADR-015 (tiered models).
+
+Azure-hosted web applications: see `standards/azure-web-application-guide.md`.
+
 ---
 
 # Deployment Architecture

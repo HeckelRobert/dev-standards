@@ -108,6 +108,10 @@ Projects shall not:
 * Expose `DbContext` to Presentation
 * Store secrets or connection strings in source control
 
+### ADR-012 — documented exception: no business database
+
+When requirements **explicitly prohibit** persisting certain business or user submission data, a project may omit a business database. Configuration may use versioned files; ephemeral cache may hold short-lived session or rate-limit state only. Document in a **project ADR** and `docs/architecture.md`.
+
 ---
 
 ## Review Date

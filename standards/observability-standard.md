@@ -108,10 +108,18 @@ Every deployable service shall expose health endpoints.
 
 | Endpoint | Purpose | Exposure |
 |----------|---------|----------|
-| `/health/live` | Process is running | Orchestrator only |
+| `/health/live` | Process is running | Orchestrator / load balancer |
 | `/health/ready` | Ready to accept traffic (DB, dependencies) | Orchestrator / load balancer |
 
-Register dependency checks for database, message broker, and critical external services.
+Projects using URL versioning may use `/api/v1/health` (or similar) — document the canonical probe path in `docs/operations.md`.
+
+Register dependency checks for database, message broker, and critical external services. **Do not** call paid external LLMs on every health probe.
+
+### Azure App Service
+
+Enable **Health check** in the App Service blade after first deploy; point to the same path as `/health/ready` or a dedicated liveness path.
+
+See `standards/azure-web-application-guide.md`.
 
 Health check failures should appear in monitoring and alerting.
 
@@ -127,6 +135,7 @@ Define alerts in `docs/operations.md` for at minimum:
 * Dependency unavailability
 * Disk or memory thresholds (when self-hosted)
 * AI cost anomalies (when AI is used)
+* LLM cost or rate-limit threshold breaches (when AI is used — ADR-014)
 
 Alerts must be actionable. Every alert has an owner and a documented response step.
 
@@ -154,6 +163,8 @@ When AI providers are used, track:
 * Estimated cost per operation where possible
 
 See ADR-006 and `standards/security-standard.md` for data handling rules.
+
+Apply ADR-014 (abuse protection) and ADR-015 (tiered models) for public or high-volume AI features.
 
 ---
 

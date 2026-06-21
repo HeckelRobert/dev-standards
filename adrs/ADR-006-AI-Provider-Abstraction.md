@@ -91,3 +91,7 @@ Rejected
 Provider implementations remain infrastructure concerns.
 
 Business logic remains provider agnostic.
+
+Model deployment selection and tiering: see **ADR-015**.
+
+Public endpoint abuse controls: see **ADR-014**.

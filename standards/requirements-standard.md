@@ -397,3 +397,23 @@ Authentication strategy is known
 Operational responsibilities are known
 
 Open questions are resolved
+
+---
+
+# Recurring NFR Patterns (reference)
+
+Use when requirements apply. Not mandatory for every project.
+
+## Backend — .NET LTS (ADR-013)
+
+* Server-side code uses **current .NET LTS** at implementation time.
+* Acceptance criteria: confirm LTS from official support policy; pin `global.json`; align CI and hosting.
+
+## Health and operations (deployable services)
+
+* Expose `/health/live` and `/health/ready` (or documented equivalent).
+* For Azure App Service, enable platform health check after deploy — see `standards/azure-web-application-guide.md`.
+
+## Optional themes (project-specific)
+
+Public LLM endpoints, data retention minimization, and authentication alternatives are **not** prescribed here. Document them in project `docs/requirements.md` and project ADRs; use platform ADR-004, ADR-012, ADR-014, and ADR-015 when applicable.

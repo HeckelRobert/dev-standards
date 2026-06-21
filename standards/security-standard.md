@@ -165,6 +165,10 @@ Log AI interactions for audit when requirements demand it. Do not log full promp
 
 Implement rate limiting and cost controls for AI endpoints. See `standards/observability-standard.md`.
 
+Public or unauthenticated endpoints that trigger external LLM calls shall follow **ADR-014** (documented abuse and cost controls).
+
+Model tier selection shall follow **ADR-015** (cost-effective default; premium escalation with justification).
+
 ---
 
 # Data Protection
@@ -198,6 +202,8 @@ Security incidents involving personal data may trigger regulatory notification o
 
 * adrs/ADR-004-Authentication-Strategy.md
 * adrs/ADR-006-AI-Provider-Abstraction.md
+* adrs/ADR-014-Public-AI-Endpoint-Abuse-Protection.md
+* adrs/ADR-015-Tiered-LLM-Model-Selection.md
 * standards/api-design-standard.md
 * standards/observability-standard.md
 * standards/cicd-standard.md

@@ -75,6 +75,8 @@ Configure monitoring.
 
 Configure alerting.
 
+Azure web apps: complete infrastructure checklist in `standards/azure-web-application-guide.md`.
+
 
 ---
 
