@@ -78,6 +78,8 @@ Projects may override platform standards only when:
 | standards/architecture.md | Architecture styles |
 | standards/cicd-standard.md | CI/CD pipelines |
 | standards/coding-standard.md | C# and .NET conventions |
+| standards/demo-data-standard.md | Realistic samples and demo paths |
+| standards/desktop-distribution-standard.md | Desktop installer, icon, shortcuts |
 | standards/documentation-standard.md | Required documentation |
 | standards/frontend-technology-selection.md | UI technology selection |
 | standards/observability-standard.md | Logging, metrics, tracing, alerting |
@@ -93,6 +95,8 @@ Projects may override platform standards only when:
 | Document | When to apply |
 |----------|---------------|
 | standards/azure-web-application-guide.md | Projects hosted on Azure App Service |
+| standards/demo-data-standard.md | Pilots and workshops with bundled sample data |
+| standards/desktop-distribution-standard.md | Windows/macOS/Linux desktop client delivery |
 
 ---
 

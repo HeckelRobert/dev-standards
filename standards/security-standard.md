@@ -57,16 +57,21 @@ Document secret rotation procedures in `docs/operations.md`.
 
 # Dependency and Supply Chain Security
 
-Dependencies shall be scanned for known vulnerabilities in CI.
+Dependencies shall be scanned for known vulnerabilities in CI on every pull request and push to `main`.
 
 Use GitHub Dependabot or equivalent. See `templates/.github/dependabot.yml`.
+
+### CI gate
+
+* Pipelines **must fail** when the vulnerability scan reports **High** or **Critical** severity for any direct or transitive package reference.
+* Replace or upgrade vulnerable packages before merge; do not suppress scans without ADR-documented exception.
 
 ### Vulnerability response
 
 | Severity | Action |
 |----------|--------|
 | Critical | Address within 7 days |
-| High | Address within 30 days |
+| High | Address within 30 days; **must not merge or release** while still present unless ADR exception |
 | Medium | Address in next maintenance window |
 | Low | Track and address when convenient |
 
@@ -75,6 +80,8 @@ Document exceptions with risk acceptance and expiry date in a project ADR.
 ### Package selection
 
 Prefer packages with active maintenance, clear licensing, and low known vulnerability history.
+
+**Do not introduce or retain packages with known High or Critical vulnerabilities** when a maintained alternative exists (for example prefer supported SQLite bundles over deprecated native payloads).
 
 Review new dependencies in pull requests. See `standards/coding-standard.md` package selection.
 

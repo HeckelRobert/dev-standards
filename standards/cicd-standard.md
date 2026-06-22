@@ -42,16 +42,27 @@ Every pipeline shall execute at minimum:
 
 1. **Restore** dependencies
 2. **Build** all solution projects in Release configuration
-3. **Unit tests**
-4. **Integration tests** (when present; required before Phase 2 pilot graduation)
-5. **Architecture tests** (when present; required before Phase 2 pilot graduation)
+3. **Dependency vulnerability scan** — see below; **must fail the pipeline** when High or Critical vulnerabilities are reported for referenced packages (including transitive). See `standards/security-standard.md`.
+4. **Unit tests**
+5. **Integration tests** (when present; required before Phase 2 pilot graduation)
+6. **Architecture tests** (when present; required before Phase 2 pilot graduation)
+
+### Vulnerability scan (.NET)
+
+Use:
+
+```bash
+dotnet list package --vulnerable --include-transitive
+```
+
+* `continue-on-error` must be **false** for this step.
+* Do not ship release artifacts while High or Critical findings remain unless documented risk acceptance exists in a project ADR with expiry.
 
 ---
 
 # Recommended Steps
 
 * Static analysis / code analyzers
-* Dependency vulnerability scanning (see `standards/security-standard.md`)
 * Code coverage reporting (informational only; not a merge gate)
 * Container image build (when applicable)
 * Publish deployment artifacts

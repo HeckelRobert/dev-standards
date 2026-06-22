@@ -273,11 +273,27 @@ Pass CancellationToken whenever practical.
 
 # Configuration
 
-Use strongly typed options.
+Use strongly typed options (`IOptions<T>` / `IOptionsMonitor<T>`).
 
 Validate configuration at startup.
 
-Avoid direct IConfiguration usage.
+Avoid direct `IConfiguration` usage in business code.
+
+### Avoid hard-coded strings
+
+Do not embed environment-specific, customer-specific, or tunable values as string literals in business logic.
+
+| Kind of value | Preferred approach |
+|---------------|-------------------|
+| URLs, paths, feature flags, limits | `appsettings.json` / environment variables / Key Vault |
+| User-visible text | RESX or localization resources |
+| Domain codes and enums | Types (`enum`, constants class), not magic strings |
+| Matching rules, labels, display maps | Configuration or data files — not `if (x == "Stainless Steel")` |
+| Type or member identity | `nameof`, reflection on types — not duplicated string names |
+
+Hard-coded strings are acceptable for **truly invariant** technical constants (for example HTTP header names) when documented.
+
+Pin dependency versions centrally (`Directory.Build.props` or equivalent) — avoid unpinned floating versions in production.
 
 ---
 

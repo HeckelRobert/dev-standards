@@ -38,6 +38,10 @@ Validate assumptions.
 
 Obtain feedback.
 
+Ship **realistic demo data** when presenting to stakeholders (`standards/demo-data-standard.md`).
+
+For desktop pilots, validate **installer + icon + launcher** on a clean machine (`standards/desktop-distribution-standard.md`).
+
 
 ---
 

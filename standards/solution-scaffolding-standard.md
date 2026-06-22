@@ -300,9 +300,19 @@ Security Configuration
 
 Copilot Instructions
 
-Cursor Rules (from `.cursor/rules/` template or project-specific adaptation)
+Cursor Rules (optional; prefer `ai/` for shared standards — see `standards/repository-standard.md`)
 
 See `templates/.github/` for reference configurations.
+
+---
+
+# Demo data and distribution
+
+When scaffolding pilots or workshop deliverables:
+
+* Include realistic sample data per `standards/demo-data-standard.md`.
+* For **desktop / local client** apps (not browser web apps), plan MSI-or-equivalent installer, icon, and shortcuts per `standards/desktop-distribution-standard.md`.
+* For **web applications**, document URL/deployment quick start in README; browser is the launcher.
 
 ---
 

@@ -101,7 +101,17 @@ Contains:
 Workflows
 Issue Templates
 Pull Request Templates
-Agent Instructions
+Dependabot configuration
+
+---
+
+# Repository hygiene
+
+Do not commit build output (`bin/`, `obj/`), publish artifacts, local databases, or secrets.
+
+Use `templates/.gitignore` as the baseline.
+
+When demonstrations are part of delivery, include `sample-data/` or equivalent per `standards/demo-data-standard.md`.
 
 ---
 
